@@ -1,0 +1,18 @@
+body {
+    background-color: rgba(0,0,0,0.69);
+}
+
+header {
+    margin: auto;
+    padding-left: 10px;
+    background-color: rgba(217,0,10,0.95);
+    display: flex;
+    min-height: auto;
+}
+
+header a {
+    text-shadow: #6f0009;
+    color: black;
+    font-size: 50px;
+    font-family: Dubai, sans-serif;
+}
