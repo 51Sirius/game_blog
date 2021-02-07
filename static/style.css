@@ -3,6 +3,7 @@ body {
 }
 
 header {
+    width: 100%;
     margin: auto;
     padding-left: 10px;
     background-color: rgba(217,0,10,0.95);
@@ -12,8 +13,14 @@ header {
 
 header a {
     text-decoration: none;
-    text-shadow: #6f0009;
+}
+
+.logo {
     color: black;
     font-size: 50px;
     font-family: Dubai, sans-serif;
+}
+
+header .buttons {
+
 }
