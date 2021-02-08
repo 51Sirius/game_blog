@@ -6,21 +6,21 @@
 {% endblock %}
 
 {% block content %}
-    {% for artical in articles %}
+    {% for article in articles %}
         <article>
             <div class="head">
-                {{ artical.title }}
+                {{ article.title }}
             </div>
             <text-block>
-                {% if artical.big %}
-                    {{ artical.text[0:200]+'...' }}
+                {% if article.big %}
+                    {{ article.text[0:200]+'...' }}
                 {% else %}
-                    {{ artical.text }}
+                    {{ article.text }}
                 {% endif %}
             </text-block>
             <div class="footer">
-                <date>{{ artical.date }}</date>
-                <a href="/article/{{ artical.id }}">Читать дальше</a>
+                <date>{{ article.date }}</date>
+                <a href="/article/{{ article.id }}">Читать дальше</a>
             </div>
         </article>
     {% endfor %}
