@@ -29,5 +29,10 @@ def homepage():
     return render_template('index.html', articles=articles, categories=categories)
 
 
+@app.route('/article/<article>')
+def article(article):
+    return render_template('article.html', article=articles[article - 1], categories=categories)
+
+
 if __name__ == '__main__':
     app.run()

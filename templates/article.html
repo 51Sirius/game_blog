@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ article.title }}
+{% endblock %}
+
+{% block content %}
+    <article>
+        <div class="head">
+                {{ artical.title }}
+            </div>
+            <text-block>
+                {{ artical.text }}
+            </text-block>
+            <div class="footer">
+                <date>{{ artical.date }}</date>
+            </div>
+    </article>
+{% endblock %}
