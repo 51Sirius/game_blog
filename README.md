@@ -1,1 +1,1 @@
-Site - game blog. Itmo project
+Site - game blog. Itmo project on flask
