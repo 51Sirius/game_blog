@@ -12,7 +12,11 @@
                 {{ artical.title }}
             </div>
             <text-block>
-                {{ artical.text }}
+                {% if artical.big %}
+                    {{ artical.text[0:200]+'...' }}
+                {% else %}
+                    {{ artical.text }}
+                {% endif %}
             </text-block>
             <div class="footer">
                 <date>{{ artical.date }}</date>

@@ -136,3 +136,14 @@ article .footer date {
     align-items: center;
     display: block;
 }
+
+@media screen and (max-width: 470px) {
+    header {
+        flex-direction: column;
+    }
+
+    but {
+        display: flex;
+        align-items: center;
+    }
+}
