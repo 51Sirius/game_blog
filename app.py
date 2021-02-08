@@ -7,6 +7,14 @@ articles = {
     2: {},
 }
 
+categories = {
+    1: {'name': 'Lost Ark'},
+    2: {'name': 'GTA'},
+    3: {'name': 'Game Dev'},
+    4: {'name': 'Steam'},
+    5: {'name': 'Company'}
+}
+
 
 @app.route('/')
 def homepage():
