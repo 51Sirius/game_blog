@@ -1,12 +1,12 @@
 body {
-    background-color: rgba(0,0,0,0.69);
+    background-color: rgb(40, 38, 38);
 }
 
 header {
     width: 100%;
     margin: auto;
     padding-left: 10px;
-    background-color: rgba(217,0,10,0.95);
+    background-color: rgba(217, 0, 10, 0.95);
     display: flex;
     min-height: auto;
 }
@@ -22,5 +22,117 @@ header a {
 }
 
 header .buttons {
+    padding: 10px 20px 10px 20px;
+    background-color: #6f0006;
+    border-radius: 10px;
+    margin: 10px;
+}
 
+header .buttons:hover {
+    cursor: pointer;
+    animation: button_click ease-in-out 1s;
+}
+
+but {
+    display: flex;
+    align-items: center;
+    margin-right: 4%;
+    margin-left: auto;
+}
+
+@keyframes button_click {
+    from {
+        border-radius: 10px;
+        transform: translateX(0);
+    }
+    50% {
+        border-radius: 2px;
+        transform: translateX(8px);
+    }
+    to {
+        transform: translateX(0);
+        border-radius: 10px;
+    }
+}
+
+.categories {
+    padding: 0;
+    margin-right: 0;
+    margin-left: auto;
+    background-color: rgb(91, 91, 91);
+}
+
+.categories li {
+    padding: 5px 20px 10px 10px;
+    margin: 5px 20px 10px 10px;
+    background-color: #b6b6b4;
+    list-style-type: none;
+}
+
+main {
+    display: flex;
+}
+
+.articles_list {
+    display: flex;
+    flex-direction: column;
+}
+
+.categories .header {
+    font-size: x-large;
+    font-family: Calibri, sans-serif;
+    margin: 0 0 0 0;
+    padding: 5px 20px 10px 10px !important;
+    background-color: rgba(217, 0, 10, 0.95);
+}
+
+.categories li a {
+    text-decoration: none;
+    color: #000651;
+}
+
+article {
+    margin: 20px 10px 10px 10px;
+    display: block;
+    background: rgb(91, 91, 91);
+}
+
+article .head {
+    font-family: Calibri, sans-serif;
+    font-size: x-large;
+    background: rgba(217, 0, 10, 0.95);
+}
+
+article text-block {
+    display: block;
+    padding: 5px 20px 10px 10px;
+    font-size: medium;
+}
+
+article .footer {
+    display: flex;
+    color: rgba(12, 12, 30, 0.6);
+    font-size: small;
+    padding: 5px 20px 10px 10px;
+}
+
+footer {
+    background: rgba(217, 0, 10, 0.95);
+}
+
+article .footer a {
+    align-items: center;
+    margin-right: 4%;
+    padding: 10px 20px 10px 20px;
+    background-color: #6f0006;
+    margin-left: auto;
+    display: block;
+    border-radius: 12px;
+    text-decoration: none;
+}
+
+article .footer date {
+    text-align: center;
+    align-items: center;
+    display: block;
 }
