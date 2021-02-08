@@ -6,6 +6,19 @@
 {% endblock %}
 
 {% block content %}
-    {% for artical in %}
+    {% for artical in articles %}
+        <article>
+            <div class="head">
+                {{ artical.title }}
+            </div>
+            <text-block>
+                {{ artical.text }}
+            </text-block>
+            <div class="footer">
+                <date>{{ artical.date }}</date>
+                <a href="">Читать дальше</a>
+            </div>
+        </article>
+    {% endfor %}
 {% endblock %}
 
