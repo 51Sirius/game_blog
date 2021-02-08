@@ -31,7 +31,7 @@ def homepage():
     return render_template('index.html', articles=articles, categories=categories)
 
 
-@app.route('/article/<article>')
+@app.route('/article/<int:article>')
 def article(article):
     return render_template('article.html', article=articles[article - 1], categories=categories)
 
