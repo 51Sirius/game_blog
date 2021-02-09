@@ -16,7 +16,7 @@ header a {
 }
 
 .logo {
-    color: black;
+    color: black !important;
     font-size: 50px;
     font-family: Dubai, sans-serif;
 }
@@ -155,8 +155,13 @@ article .footer .date {
     }
 }
 
-article .text-block img {
+article .text-block image {
     border-radius: 10px;
     margin-top: 20px;
     margin-left: 10px;
+}
+
+a {
+    color: #32000e;
+    text-decoration: none;
 }
