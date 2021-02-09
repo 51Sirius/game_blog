@@ -11,6 +11,9 @@
             </div>
             <text-block>
                 {{ article.text }}
+                {% if article.img %}
+                    <img src="", alt="Тут была картинка">
+                {% endif %}
             </text-block>
             <div class="footer">
                 <date>{{ article.date }}</date>
