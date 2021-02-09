@@ -27,9 +27,9 @@
         <li class="header">
             Категории
         </li>
-        {% for categor in categories %}
+        {% for categoria in categories%}
             <li>
-                <a href="">{{ categor.name }}</a>
+                <a href="/categories/{{ categoria.id }}">{{ categoria.name }}</a>
             </li>
         {% endfor %}
     </ul>
