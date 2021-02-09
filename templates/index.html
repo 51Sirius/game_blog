@@ -11,13 +11,13 @@
             <div class="head">
                 {{ article.title }}
             </div>
-            <text-block>
+            <div class="text-block">
                 {% if article.big %}
                     {{ article.text[0:200]+'...' }}
                 {% else %}
                     {{ article.text }}
                 {% endif %}
-            </text-block>
+            </div>
             <div class="footer">
                 <date>{{ article.date }}</date>
                 <a href="/article/{{ article.id }}">Читать дальше</a>

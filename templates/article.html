@@ -7,16 +7,16 @@
 {% block content %}
     <article>
         <div class="head">
-                {{ article.title }}
-            </div>
-            <text-block>
-                {{ article.text }}
-                {% if article.img %}
-                    <img src="", alt="Тут была картинка">
-                {% endif %}
-            </text-block>
-            <div class="footer">
-                <date>{{ article.date }}</date>
-            </div>
+            {{ article.title }}
+        </div>
+        <div class="text-block">
+            {{ article.text }}
+            {% if article.img %}
+                <img src="{{ article.img_id }}" alt="Тут была картинка">
+            {% endif %}
+        </div>
+        <div class="footer">
+            <div class="date">{{ article.date }}</div>
+        </div>
     </article>
 {% endblock %}

@@ -103,7 +103,7 @@ article .head {
     background: rgba(217, 0, 10, 0.95);
 }
 
-article text-block {
+article .text-block {
     display: block;
     padding: 5px 20px 10px 10px;
     font-size: medium;
@@ -118,6 +118,11 @@ article .footer {
 
 footer {
     background: rgba(217, 0, 10, 0.95);
+    display: flex;
+}
+
+footer a {
+    text-decoration: none;
 }
 
 article .footer a {
@@ -132,7 +137,7 @@ article .footer a {
     text-decoration: none;
 }
 
-article .footer date {
+article .footer .date {
     text-align: center;
     align-items: center;
     display: block;
@@ -148,4 +153,10 @@ article .footer date {
         align-items: center;
         margin: auto;
     }
+}
+
+article .text-block img {
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 10px;
 }
