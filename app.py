@@ -9,7 +9,8 @@ articles = [
      'big': True,
      'id': 1,
      'img': False,
-     'img_id': ''
+     'img_id': '',
+     'categories': []
      },
     {'title': 'Gaming IT',
      'text': 'В следующем месяце Disco Elysium дебютирует на консолях и получит расширенную версию — The Final Cut. Среди нововведений — политические квесты, о которых во время анонса нового издания разработчики почти ничего не говорили. Зато поговорили в интервью Push Square.',
@@ -17,7 +18,8 @@ articles = [
      'big': False,
      'id': 2,
      'img': False,
-     'img_id': ''
+     'img_id': '',
+     'categories': []
      },
 ]
 
@@ -35,9 +37,14 @@ def homepage():
     return render_template('index.html', articles=articles, categories=categories)
 
 
-@app.route('/article/<int:article>')
-def article(article):
-    return render_template('article.html', article=articles[article - 1], categories=categories)
+@app.route('/article/<int:art>')
+def article(art):
+    return render_template('article.html', article=articles[art - 1], categories=categories)
+
+
+@app.route('/categories/<int:categories>')
+def article(cat):
+    return render_template('categories.html', articles=articles, categories=categories[cat-1])
 
 
 if __name__ == '__main__':
