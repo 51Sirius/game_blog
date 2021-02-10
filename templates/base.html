@@ -11,7 +11,7 @@
 </head>
 <body>
 <header>
-    <a href="/" class="logo">Game Blog</a>
+    <a href="{{ url_for('homepage') }}" class="logo">Game Blog</a>
     <but>
         <a class="buttons" href="singin.html">Sing in</a>
         <a class="buttons" href="login.html">Log In</a>
@@ -29,7 +29,7 @@
         </li>
         {% for categoria in categories%}
             <li>
-                <a href="/categories/{{ categoria.id }}">{{ categoria.name }}</a>
+                <a href=" {{ url_for('categor', cat=categoria.id) }} ">{{ categoria.name }}</a>
             </li>
         {% endfor %}
     </ul>

@@ -20,7 +20,7 @@
             </div>
             <div class="footer">
                 <date>{{ article.date }}</date>
-                <a href="/article/{{ article.id }}">Читать дальше</a>
+                <a href="{{ url_for('article', art=article.id) }}">Читать дальше</a>
             </div>
         </article>
     {% endfor %}
