@@ -174,7 +174,7 @@ article .footer .date {
         display: none;
     }
 
-    main .categories:hover > main .categories .dropdown {
+    main .categories::after > .dropdown {
         visibility: visible;
         opacity: 1;
         display: block;
