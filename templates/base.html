@@ -27,8 +27,8 @@
         <li class="header">
             Категории
         </li>
-        {% for categoria in categories%}
-            <li>
+        {% for categoria in categories %}
+            <li class="dropdown">
                 <a href=" {{ url_for('categor', cat=categoria.id) }} ">{{ categoria.name }}</a>
             </li>
         {% endfor %}

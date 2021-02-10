@@ -1,12 +1,12 @@
 body {
-    background-color: rgb(40, 38, 38);
+    background-color: #EEEEEE;
 }
 
 header {
     width: 100%;
     margin: auto;
     padding-left: 10px;
-    background-color: rgba(217, 0, 10, 0.95);
+    background-color: #222831;
     display: flex;
     min-height: auto;
 }
@@ -16,14 +16,14 @@ header a {
 }
 
 .logo {
-    color: black !important;
+    color: #00ADB5 !important;
     font-size: 50px;
     font-family: Dubai, sans-serif;
 }
 
 header .buttons {
     padding: 10px 20px 10px 20px;
-    background-color: #6f0006;
+    background-color: #00ADB5;
     border-radius: 10px;
     margin: 10px;
 }
@@ -56,10 +56,11 @@ but {
 }
 
 .categories {
+    border: 2px #112D4E;
     padding: 0;
     margin-right: 0;
     margin-left: auto;
-    background-color: rgb(91, 91, 91);
+    background-color: #696A6C;
 }
 
 .categories li {
@@ -79,11 +80,12 @@ main {
 }
 
 .categories .header {
+    color: #00ADB5;
     font-size: x-large;
     font-family: Calibri, sans-serif;
     margin: 0 0 0 0;
     padding: 5px 20px 10px 10px !important;
-    background-color: rgba(217, 0, 10, 0.95);
+    background-color: #112D4E;
 }
 
 .categories li a {
@@ -98,9 +100,11 @@ article {
 }
 
 article .head {
+    color: #00ADB5;
+    padding-left: 10px;
     font-family: Calibri, sans-serif;
     font-size: x-large;
-    background: rgba(217, 0, 10, 0.95);
+    background: #112D4E;
 }
 
 article .text-block {
@@ -117,7 +121,7 @@ article .footer {
 }
 
 footer {
-    background: rgba(217, 0, 10, 0.95);
+    background: #112D4E;
     display: flex;
 }
 
@@ -126,11 +130,11 @@ footer a {
 }
 
 article .footer a {
-    color: #32000e;
+    color: #393E46;
     align-items: center;
     margin-right: 4%;
     padding: 10px 20px 10px 20px;
-    background-color: #6f0006;
+    background-color: #b6b6b4;
     margin-left: auto;
     display: block;
     border-radius: 12px;
@@ -153,15 +157,43 @@ article .footer .date {
         align-items: center;
         margin: auto;
     }
+
+    main {
+        flex-flow: wrap;
+        flex-direction: column;
+    }
+
+    main .categories {
+        order: 0;
+        width: 100%;
+    }
+
+    main .categories .dropdown {
+        visibility: hidden;
+        opacity: 0;
+        display: none;
+    }
+
+    main .categories:hover > main .categories .dropdown {
+        visibility: visible;
+        opacity: 1;
+        display: block;
+    }
+
+    main .articles_list {
+        order: 1;
+    }
+
 }
 
-article .text-block image {
+article .text-block .image {
+    float: bottom;
     border-radius: 10px;
     margin-top: 20px;
     margin-left: 10px;
 }
 
 a {
-    color: #32000e;
+    color: #393E46;
     text-decoration: none;
 }
