@@ -172,9 +172,11 @@ article .footer .date {
         visibility: hidden;
         opacity: 0;
         display: none;
+        transition: opacity 1s;
+
     }
 
-    main .categories::after > .dropdown {
+    main .categories:hover > .dropdown {
         visibility: visible;
         opacity: 1;
         display: block;
@@ -183,6 +185,7 @@ article .footer .date {
     main .articles_list {
         order: 1;
     }
+
 
 }
 
