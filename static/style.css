@@ -94,6 +94,7 @@ main {
 }
 
 article {
+    border: 6px solid #222831;
     margin: 20px 10px 10px 10px;
     display: block;
     background: rgb(91, 91, 91);

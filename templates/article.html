@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 
+{% block custom %}
+    <link rel="stylesheet" href={{ url_for('static', filename='artical_Style.css') }}>
+{% endblock %}
+
 {% block title %}
     {{ article.title }}
 {% endblock %}
