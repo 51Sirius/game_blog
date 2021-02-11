@@ -32,5 +32,9 @@
 }
 
 @media screen and (max-width: 550px) {
+    article .text-block .image {
+        margin: 10px 10px 10px 10px;
+        width: 80%;
+    }
 
 }
