@@ -186,6 +186,10 @@ article .footer .date {
     main .articles_list {
         order: 1;
     }
+    header form {
+        align-items: center;
+        margin: auto !important;
+    }
 
 
 }
@@ -214,4 +218,13 @@ header form input {
     box-sizing: border-box;
     border: 5px solid #00ADB5;
     border-radius: 10px;
+}
+
+@media screen and (max-width: 650px) {
+    header {
+        flex-wrap: wrap;
+    }
+    header form {
+        margin-right: 4%;
+    }
 }
