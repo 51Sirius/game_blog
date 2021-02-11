@@ -18,3 +18,7 @@ articles = [
      'categories': [5]
      },
 ]
+
+
+def find_by_text(text):
+    result = []
