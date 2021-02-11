@@ -20,5 +20,10 @@ articles = [
 ]
 
 
-def find_by_text(text):
+def find_by_text(text: str):
     result = []
+    text = text.lower()
+    for article in articles:
+        if text in article['text'] or text in article['title']:
+            result.append(article)
+    return result
