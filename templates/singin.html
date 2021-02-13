@@ -1,1 +1,28 @@
 {% extends 'login.html' %}
+
+{% block title %}
+    Регестрация
+{% endblock %}
+
+{% block name %}
+    Регестрация
+{% endblock %}
+
+{% block menu %}
+    <div class="block-login">
+        <div class="text-login">
+            Никнейм
+        </div>
+        <form action="">
+            <input name="name" class="form-login" type="text" placeholder="Имя" aria-label="Имя">
+        </form>
+    </div>
+    <div class="block-login">
+        <div class="text-login">
+            Пароль
+        </div>
+        <form action="">
+            <input name="password" class="form-login" type="password" placeholder="Пароль" aria-label="Пароль">
+        </form>
+    </div>
+{% endblock %}
