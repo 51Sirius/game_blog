@@ -192,6 +192,11 @@ article .footer .date {
         margin: auto !important;
     }
 
+    .logo {
+        font-size: 46px;
+        text-align: center;
+    }
+
 
 }
 
@@ -208,7 +213,7 @@ a {
 }
 
 header form {
-    padding-top: 20px;
+    padding-top: 30px;
     margin-left: auto;
     margin-right:auto;
     display: block;
