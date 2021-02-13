@@ -2,12 +2,14 @@ body {
     background-color: #EEEEEE;
 }
 main {
+    display: flex;
     padding: 40px;
     min-height: 200px;
     margin: 8% 20px 20px 20px;
     border-radius: 14px;
     box-shadow: #222831 0 0 3px;
     background: #c3f0ff;
+    flex-direction: column;
 }
 
 main .head {
@@ -20,7 +22,8 @@ main .head {
 }
 
 .block-login {
-    margin-top: 10px;
+    align-items: center;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
 }
@@ -31,7 +34,9 @@ main .head {
 }
 
 .form-login{
-    width: 50%;
+    margin-top: 10px;
+    outline: none;
+    max-width: 400px;
     height: 30px;
     border-radius: 6px;
 }
