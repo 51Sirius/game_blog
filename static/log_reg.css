@@ -1,3 +1,16 @@
 body {
     background-color: #EEEEEE;
 }
+main {
+    margin: 8% 20px 20px 20px;
+    border-radius: 14px;
+    box-shadow: #222831;
+    background: #b6b6b4;
+}
+
+main .head {
+    font-size: xxx-large;
+    text-align: center;
+    border-radius: 10px;
+    border: black 1px solid;
+}
