@@ -9,14 +9,22 @@
     </title>
 </head>
 <body>
-    <main>
-        <div class="head">
-            {% block name %}
-                Вход
-            {% endblock %}
-        </div>
-        {% block menu %}
+<main>
+    <div class="head">
+        {% block name %}
+            Вход
         {% endblock %}
-    </main>
+    </div>
+    {% block menu %}
+        <div class="block-login">
+            <div class="text-login">
+                Никнейм
+            </div>
+            <form action="">
+                <input name="name" class="form-login" type="text" placeholder="Имя" aria-label="Имя">
+            </form>
+        </div>
+    {% endblock %}
+</main>
 </body>
 </html>

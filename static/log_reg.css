@@ -18,3 +18,18 @@ main .head {
     color: #222831;
     text-shadow: #000651 0 0 2px;
 }
+
+.block-login {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.text-login {
+    font-size: x-large;
+    font-style: italic;
+}
+
+form-login{
+
+}
