@@ -7,7 +7,7 @@ main {
     margin: 8% 20px 20px 20px;
     border-radius: 14px;
     box-shadow: #222831 0 0 3px;
-    background: #b6b6b4;
+    background: #c3f0ff;
 }
 
 main .head {
@@ -26,10 +26,12 @@ main .head {
 }
 
 .text-login {
-    font-size: x-large;
+    font-size: xx-large;
     font-style: italic;
 }
 
-form-login{
-
+.form-login{
+    width: 50%;
+    height: 30px;
+    border-radius: 6px;
 }
