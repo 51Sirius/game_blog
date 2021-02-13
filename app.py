@@ -31,9 +31,9 @@ def login():
     return render_template('login.html')
 
 
-@app.route('/regin')
-def regin():
-    return render_template('login.html')
+@app.route('/singin')
+def singin():
+    return render_template('singin.html')
 
 
 if __name__ == '__main__':
