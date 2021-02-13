@@ -56,11 +56,12 @@ but {
 }
 
 .categories {
+    border-radius: 10px;
     border: 2px #112D4E;
     padding: 0;
     margin-right: 0;
     margin-left: auto;
-    background-color: #696A6C;
+    background-color: #696A6C33;
 }
 
 .categories li {
@@ -97,7 +98,7 @@ article {
     border: 6px solid #222831;
     margin: 20px 10px 10px 10px;
     display: block;
-    background: rgb(91, 91, 91);
+    background: rgba(91, 91, 91, 0.2);
 }
 
 article .head {
