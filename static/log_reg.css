@@ -2,9 +2,11 @@ body {
     background-color: #EEEEEE;
 }
 main {
+    padding: 40px;
+    min-height: 200px;
     margin: 8% 20px 20px 20px;
     border-radius: 14px;
-    box-shadow: #222831;
+    box-shadow: #222831 0 0 3px;
     background: #b6b6b4;
 }
 
@@ -13,4 +15,6 @@ main .head {
     text-align: center;
     border-radius: 10px;
     border: black 1px solid;
+    color: #222831;
+    text-shadow: #000651 0 0 2px;
 }
