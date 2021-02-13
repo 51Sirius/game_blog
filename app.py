@@ -26,5 +26,15 @@ def search():
     return render_template('index.html', categories=categories, articles=find_by_text(text))
 
 
+@app.route('/login')
+def login():
+    return render_template('login.html')
+
+
+@app.route('/regin')
+def regin():
+    return render_template('login.html')
+
+
 if __name__ == '__main__':
     app.run()
