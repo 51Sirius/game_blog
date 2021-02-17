@@ -30,7 +30,6 @@ main .head {
 
 .text-login {
     font-size: xx-large;
-    font-style: italic;
 }
 
 .form-login{
@@ -39,4 +38,14 @@ main .head {
     max-width: 400px;
     height: 30px;
     border-radius: 6px;
+}
+
+@media screen  and (max-width: 420px){
+    main {
+        margin: 0;
+        padding: 10px;
+    }
+    main .head {
+        font-size: xx-large;
+    }
 }
