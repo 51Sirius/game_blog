@@ -27,12 +27,12 @@ def search():
 
 
 @app.route('/login')
-def login():
+def singin():
     return render_template('login.html')
 
 
 @app.route('/singin')
-def singin():
+def singup():
     return render_template('singin.html')
 
 
