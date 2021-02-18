@@ -8,7 +8,7 @@ main {
     margin: 8% 20px 20px 20px;
     border-radius: 14px;
     box-shadow: #222831 0 0 3px;
-    background: #c3f0ff;
+    background: rgba(141, 141, 195, 0.61);
     flex-direction: column;
 }
 
@@ -42,6 +42,8 @@ main .head {
 
 @media screen  and (max-width: 420px){
     main {
+        width: 100%;
+        border-radius: 0;
         margin: 0;
         padding: 10px;
     }
