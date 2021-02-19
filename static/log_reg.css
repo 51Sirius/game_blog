@@ -5,7 +5,7 @@ main {
     display: flex;
     padding: 40px;
     min-height: 200px;
-    margin: 8% 20px 20px 20px;
+    margin: 4% 20px 20px 20px;
     border-radius: 14px;
     box-shadow: #222831 0 0 3px;
     background: rgba(141, 141, 195, 0.61);
@@ -18,7 +18,7 @@ main .head {
     border-radius: 10px;
     border: black 1px solid;
     color: #222831;
-    text-shadow: #000651 0 0 2px;
+    text-shadow: #000651 0 0 0px;
 }
 
 .block-login {
