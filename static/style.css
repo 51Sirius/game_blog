@@ -141,9 +141,15 @@ footer {
 }
 
 footer a {
+    margin-top: 1%;
     display: block;
     text-decoration: none;
-    color: #EEEEEE;
+    color: #b6b6b4;
+}
+
+
+footer p {
+    font-size: x-large;
 }
 
 article .footer a {
