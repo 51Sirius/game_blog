@@ -171,6 +171,12 @@ article .footer .date {
 }
 
 @media screen and (max-width: 470px) {
+    footer {
+        flex-direction: column;
+    }
+    footer .block-footer{
+        text-align: left;
+    }
     header {
         flex-direction: column;
     }
