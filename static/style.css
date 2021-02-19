@@ -126,7 +126,8 @@ article .footer {
 }
 
 footer {
-    background: #112D4E;
+    background: #000651;
+    color: #00ADB5;
     display: flex;
 }
 
