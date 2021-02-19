@@ -126,13 +126,24 @@ article .footer {
 }
 
 footer {
+    justify-content: center;
+    padding: 10px;
     background: #000651;
     color: #00ADB5;
     display: flex;
 }
 
+.block-footer {
+    flex-grow: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
 footer a {
+    display: block;
     text-decoration: none;
+    color: #EEEEEE;
 }
 
 article .footer a {
