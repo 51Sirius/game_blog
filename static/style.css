@@ -78,7 +78,6 @@ main {
 }
 
 .articles_list {
-    overflow: auto;
     display: flex;
     flex-direction: column;
 }
