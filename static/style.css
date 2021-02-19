@@ -78,7 +78,7 @@ main {
 }
 
 .articles_list {
-    overflow-y: scroll;
+    overflow: auto;
     display: flex;
     flex-direction: column;
 }
