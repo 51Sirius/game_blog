@@ -36,5 +36,10 @@ def singup():
     return render_template('singin.html')
 
 
+@app.errorhandler(404)
+def not_found(error):
+    return render_template('errors/404.html'), 404
+
+
 if __name__ == '__main__':
     app.run()
