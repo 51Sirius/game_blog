@@ -249,6 +249,7 @@ header form {
 }
 
 header form input {
+    padding: 3px;
     outline: none;
     box-sizing: border-box;
     border: 5px solid #00ADB5;
@@ -262,4 +263,11 @@ header form input {
     header form {
         margin-right: 4%;
     }
+}
+
+header form button {
+    align-items: center;a
+    background: #222831;
+    border-radius: 10px;
+    border: #00ADB5;
 }
