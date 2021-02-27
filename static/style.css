@@ -242,13 +242,13 @@ a {
 }
 
 header form {
-    padding-top: 30px;
+    display: flex;
     margin-left: auto;
     margin-right:auto;
-    display: block;
 }
 
 header form input {
+    margin: auto;
     padding: 3px;
     outline: none;
     box-sizing: border-box;
@@ -266,8 +266,6 @@ header form input {
 }
 
 header form button {
-    align-items: center;a
     background: #222831;
-    border-radius: 10px;
     border: #00ADB5;
 }
