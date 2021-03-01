@@ -125,6 +125,7 @@ article .footer {
 }
 
 footer {
+    width: 100%;
     justify-content: center;
     padding: 10px;
     background: #222831;
