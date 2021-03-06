@@ -1,11 +1,11 @@
 from flask import Flask, render_template, request
 from categories import categories
 from article import articles, find_by_text
-from flask_sqlalchemy import SQLAlchemy
+from database import db, Users
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////database.sqlite'
-db = SQLAlchemy(app)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
+db.init_app(app)
 
 
 @app.route('/')
