@@ -18,7 +18,9 @@ class Article(db.Model):
     big = db.Column(db.Boolean, default=True)
     img = db.Column(db.Boolean, default=False)
     img_url = db.Column(db.String(70))
+    author = db.Column(db.Integer)
 
 
 class Categories(db.Model):
-    pass
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    name = db.Column(db.String, nullable=True)
