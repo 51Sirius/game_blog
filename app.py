@@ -2,10 +2,12 @@ from flask import Flask, render_template, request
 from categories import categories
 from article import articles, find_by_text
 from database import db, Users
+from flask_migrate import Migrate
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
 db.init_app(app)
+migrate = Migrate(app, db)
 
 
 @app.route('/')

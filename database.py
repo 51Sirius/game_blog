@@ -8,6 +8,7 @@ class Users(db.Model):
     name = db.Column(db.String(70), nullable=True)
     mail = db.Column(db.String(70), nullable=True, unique=True)
     password = db.Column(db.String(70), nullable=True)
+    admin_field = db.Column(db.Boolean, default=False)
 
 
 class Article(db.Model):
