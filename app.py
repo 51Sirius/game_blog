@@ -12,6 +12,7 @@ migrate = Migrate(app, db)
 
 @app.route('/')
 def homepage():
+    articles = Article.query.all()
     return render_template('index.html', articles=articles, categories=categories)
 
 
