@@ -12,9 +12,9 @@
                 </div>
                 <div class="text-block">
                     {% if article.big %}
-                        {{ article.text[0:200]+'...' }}
+                        {{ article.body[0:200]+'...' }}
                     {% else %}
-                        {{ article.text }}
+                        {{ article.body }}
                     {% endif %}
                 </div>
                 <div class="footer">

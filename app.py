@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 from categories import categories
-from article import articles, find_by_text
+from article import find_by_text
 from database import db, Users, Article, Categories
 from flask_migrate import Migrate
 
@@ -18,18 +18,21 @@ def homepage():
 
 @app.route('/article/<int:art>')
 def article(art):
-    return render_template('article.html', article=articles[art - 1], categories=categories)
+    article = Article.query.filter_by(id=art).first_or_404()
+    return render_template('article.html', article=article, categories=categories)
 
 
 @app.route('/categories/<int:cat>')
 def categor(cat):
+    articles = Article.query.all()
     return render_template('categories.html', articles=articles, categor=categories[cat - 1], categories=categories)
 
 
 @app.route('/search')
 def search():
     text = request.args['text']
-    return render_template('index.html', categories=categories, articles=find_by_text(text))
+    articles = Article.query.all()
+    return render_template('index.html', categories=categories, articles=find_by_text(text, articles))
 
 
 @app.route('/login')
@@ -44,6 +47,7 @@ def singup():
 
 @app.errorhandler(404)
 def not_found(error):
+    articles = Article.query.all()
     return render_template('errors/404.html', articles=articles, categories=categories), 404
 
 

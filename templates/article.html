@@ -14,9 +14,9 @@
             {{ article.title }}
         </div>
         <div class="text-block">
-            <div>{{ article.text }}</div>
+            <div>{{ article.body }}</div>
             {% if article.img %}
-                <img src="{{ article.img_id }}" alt="Тут была картинка" class="image">
+                <img src="{{ article.img_url }}" alt="Тут была картинка" class="image">
             {% endif %}
         </div>
         <div class="footer">
