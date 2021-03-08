@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 from categories import categories
 from article import articles, find_by_text
-from database import db, Users
+from database import db, Users, Article, Categories
 from flask_migrate import Migrate
 
 app = Flask(__name__)
