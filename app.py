@@ -3,8 +3,11 @@ from categories import categories
 from article import find_by_text
 from database import db, Users, Article, Categories
 from flask_migrate import Migrate
+from forms import ArticleForm
+from flask_wtf import form
 
 app = Flask(__name__)
+app.secret_key = b'+dw4124rafa'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
 db.init_app(app)
 migrate = Migrate(app, db)
@@ -53,10 +56,17 @@ def not_found(error):
 
 @app.route('/create_article', methods=['GET', 'POST'])
 def create_article():
-    if request.method == 'POST':
-
+    article_form = ArticleForm()
+    if article_form.validate_on_submit():
+        title = article_form.title.data
+        body = article_form.body.data
+        category_id = article_form.category_id.data
+        author_id = article_form.author_id.data
+        article = Article(title=title, body=body, category_id=category_id, author_id=author_id)
+        db.session.add(article)
+        db.session.commit()
         return redirect(url_for('homepage'))
-    return render_template('new_article.html')
+    return render_template('new_article.html', form=article_form)
 
 
 if __name__ == '__main__':

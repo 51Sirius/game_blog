@@ -8,18 +8,11 @@
 {% endblock %}
 {% block content %}
     <form action="{{ url_for('create_article') }}" method="POST" style="margin: 10px">
-        <div class="mb-3">
-            <label for="title" class="form-label">Тайтл</label>
-            <textarea class="form-control" id="title" rows="3"></textarea>
-        </div>
-        <div class="mb-3">
-            <label for="text" class="form-label">Введите текст</label>
-            <textarea class="form-control" id="text" rows="3"></textarea>
-        </div>
-        <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-        </div>
+        {{ form.csrf_token }}
+        <div>{{ form.title.label }}{{ form.title }}</div>
+        <div>{{ form.body.label }}{{ form.body }}</div>
+        <div>{{ form.category_id.label }}{{ form.category_id }}</div>
+        <div>{{ form.author_id.label }}{{ form.author_id }}</div>
         <button type="submit" class="btn btn-primary">Создать</button>
     </form>
 {% endblock %}
