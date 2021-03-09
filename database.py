@@ -19,8 +19,8 @@ class Article(db.Model):
     big = db.Column(db.Boolean, default=True)
     img = db.Column(db.Boolean, default=False)
     img_url = db.Column(db.String(70))
-    author_id = db.Column(db.Integer, db.ForeignKey('user.id'))
-    category_id = db.Column(db.Integer, db.ForeignKey('category.id'))
+    author_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+    category_id = db.Column(db.Integer, db.ForeignKey('categories.id'))
     author = db.relationship('Users', backref=db.backref('articles', lazy=True))
     category = db.relationship('Categories', backref=db.backref('articles', lazy=True))
 
