@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 from categories import categories
 from article import find_by_text
 from database import db, Users, Article, Categories
@@ -49,6 +49,14 @@ def singup():
 def not_found(error):
     articles = Article.query.all()
     return render_template('errors/404.html', articles=articles, categories=categories), 404
+
+
+@app.route('/create_article', methods=['GET', 'POST'])
+def create_article():
+    if request.method == 'POST':
+
+        return redirect(url_for('homepage'))
+    return render_template('new_article.html')
 
 
 if __name__ == '__main__':
