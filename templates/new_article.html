@@ -4,10 +4,10 @@
           integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 {% endblock %}
 {% block title %}
-    Create
+    Новая статья
 {% endblock %}
 {% block content %}
-    <form action="{{ url_for('create_article') }}" method="POST" style="margin: 10px">
+    <form action="{{ url_for('create_article') }}" method="POST" style="">
         {{ form.csrf_token }}
         <div>{{ form.title.label }}{{ form.title }}</div>
         <div>{{ form.body.label }}{{ form.body }}</div>
