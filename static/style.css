@@ -239,6 +239,7 @@ article .text-block .image {
     border-radius: 10px;
     margin-top: 20px;
     margin-left: 10px;
+    max-width: 50%;
 }
 
 a {
