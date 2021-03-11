@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request, redirect, url_for
-from categories import categories
 from article import find_by_text
 from database import db, Users, Article, Categories
 from flask_migrate import Migrate
@@ -16,18 +15,21 @@ migrate = Migrate(app, db)
 @app.route('/')
 def homepage():
     articles = Article.query.all()
+    categories = Categories.query.all()
     return render_template('index.html', articles=articles, categories=categories)
 
 
 @app.route('/article/<int:art>')
 def article(art):
     article = Article.query.filter_by(id=art).first_or_404()
+    categories = Categories.query.all()
     return render_template('article.html', article=article, categories=categories)
 
 
 @app.route('/categories/<int:cat>')
 def categor(cat):
     articles = Article.query.all()
+    categories = Categories.query.all()
     return render_template('categories.html', articles=articles, categor=categories[cat - 1], categories=categories)
 
 
@@ -35,6 +37,7 @@ def categor(cat):
 def search():
     text = request.args['text']
     articles = Article.query.all()
+    categories = Categories.query.all()
     return render_template('index.html', categories=categories, articles=find_by_text(text, articles))
 
 
@@ -50,6 +53,7 @@ def singup():
 
 @app.errorhandler(404)
 def not_found(error):
+    categories = Categories.query.all()
     articles = Article.query.all()
     return render_template('errors/404.html', articles=articles, categories=categories), 404
 
