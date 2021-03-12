@@ -69,7 +69,7 @@ def create_article():
         category_id = article_form.category_id.data
         author_id = article_form.author_id.data
         image = article_form.image.data
-        date = datetime.datetime.now().strftime('%Y.%m.%d')
+        date = datetime.datetime.now().strftime('%d.%m..%Y')
         if image is not None:
             img = True
         else:
