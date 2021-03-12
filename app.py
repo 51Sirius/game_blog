@@ -71,7 +71,7 @@ def create_article():
         if image is not None:
             img = True
         else:
-            img=False
+            img = False
         if len(body) > 300:
             big_body = True
         else:

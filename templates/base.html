@@ -27,9 +27,10 @@
     </but>
 </header>
 <main>
+    {% block any_content %}
+    {% endblock %}
     <div class="articles_list">
         {% block content %}
-            tut bil cot
         {% endblock %}
     </div>
     <ul class="categories">

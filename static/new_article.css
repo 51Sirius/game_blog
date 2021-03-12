@@ -1,0 +1,10 @@
+.main_create {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.button_create {
+    background: #00ADB5;
+    max-width: 10%;
+}

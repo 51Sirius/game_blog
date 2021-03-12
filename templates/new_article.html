@@ -1,17 +1,18 @@
 {% extends 'base.html' %}
 {% block custom %}
+    <link rel="stylesheet" href={{ url_for('static', filename='new_article.css') }}>
 {% endblock %}
 {% block title %}
     Новая статья
 {% endblock %}
-{% block content %}
-    <form action="{{ url_for('create_article') }}" method="POST" style="">
+{% block any_content %}
+    <form action="{{ url_for('create_article') }}" method="POST" class="main_create">
         {{ form.csrf_token }}
         <div>{{ form.title.label }}{{ form.title }}</div>
         <div>{{ form.body.label }}{{ form.body }}</div>
         <div>{{ form.image.label }}{{ form.image }}</div>
         <div>{{ form.category_id.label }}{{ form.category_id }}</div>
         <div>{{ form.author_id.label }}{{ form.author_id }}</div>
-        <button type="submit" class="btn btn-primary">Создать</button>
+        <button type="submit" class="button_create">Создать</button>
     </form>
 {% endblock %}
