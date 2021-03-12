@@ -72,7 +72,12 @@ def create_article():
             img = True
         else:
             img=False
-        article = Article(title=title, body=body, category_id=category_id, author_id=author_id, img=img, img_url=image)
+        if len(body) > 300:
+            big_body = True
+        else:
+            big_body = False
+        article = Article(title=title, body=body, category_id=category_id, author_id=author_id, img=img, img_url=image,
+                          big=big_body)
         db.session.add(article)
         db.session.commit()
         return redirect(url_for('homepage'))
