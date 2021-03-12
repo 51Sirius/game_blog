@@ -1,10 +1,25 @@
 .main_create {
+    margin: 20px 10px 100px 10px;
     align-items: center;
     display: flex;
     flex-direction: column;
     width: 100%;
 }
+
 .button_create {
     background: #00ADB5;
     max-width: 10%;
+}
+
+.big_text {
+
+}
+
+.block-label {
+    margin: 0;
+    text-align: center;
+    font-size: 20px;
+}
+.form-block {
+    margin-top: 10px;
 }
