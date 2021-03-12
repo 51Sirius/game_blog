@@ -60,6 +60,7 @@ def not_found(error):
 
 @app.route('/create_article', methods=['GET', 'POST'])
 def create_article():
+    categories = Categories.query.all()
     article_form = ArticleForm()
     if article_form.validate_on_submit():
         title = article_form.title.data
@@ -70,7 +71,7 @@ def create_article():
         db.session.add(article)
         db.session.commit()
         return redirect(url_for('homepage'))
-    return render_template('new_article.html', form=article_form)
+    return render_template('new_article.html', form=article_form, categories=categories)
 
 
 if __name__ == '__main__':
