@@ -67,7 +67,12 @@ def create_article():
         body = article_form.body.data
         category_id = article_form.category_id.data
         author_id = article_form.author_id.data
-        article = Article(title=title, body=body, category_id=category_id, author_id=author_id)
+        image = article_form.image.data
+        if image is not None:
+            img = True
+        else:
+            img=False
+        article = Article(title=title, body=body, category_id=category_id, author_id=author_id, img=img, img_url=image)
         db.session.add(article)
         db.session.commit()
         return redirect(url_for('homepage'))
