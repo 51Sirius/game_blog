@@ -4,6 +4,7 @@ from database import db, Users, Article, Categories
 from flask_migrate import Migrate
 from forms import ArticleForm
 from flask_wtf import form
+import datetime
 
 app = Flask(__name__)
 app.secret_key = b'+dw4124rafa'
@@ -68,6 +69,7 @@ def create_article():
         category_id = article_form.category_id.data
         author_id = article_form.author_id.data
         image = article_form.image.data
+        date = datetime.datetime.now().strftime('%Y.%m.%d')
         if image is not None:
             img = True
         else:
@@ -77,7 +79,7 @@ def create_article():
         else:
             big_body = False
         article = Article(title=title, body=body, category_id=category_id, author_id=author_id, img=img, img_url=image,
-                          big=big_body)
+                          big=big_body, date=date)
         db.session.add(article)
         db.session.commit()
         return redirect(url_for('homepage'))
