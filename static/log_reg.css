@@ -8,46 +8,6 @@ main {
     margin: 4% 20px 20px 20px;
     border-radius: 14px;
     box-shadow: #222831 0 0 3px;
-    background: rgba(141, 141, 195, 0.61);
+    background: #b6b6b4;
     flex-direction: column;
-}
-
-main .head {
-    font-size: xxx-large;
-    text-align: center;
-    border-radius: 10px;
-    border: black 1px solid;
-    color: #222831;
-    text-shadow: #000651 0 0 0px;
-}
-
-.block-login {
-    align-items: center;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-}
-
-.text-login {
-    font-size: xx-large;
-}
-
-.form-login{
-    margin-top: 10px;
-    outline: none;
-    max-width: 400px;
-    height: 30px;
-    border-radius: 6px;
-}
-
-@media screen  and (max-width: 420px){
-    main {
-        width: 100%;
-        border-radius: 0;
-        margin: 0;
-        padding: 10px;
-    }
-    main .head {
-        font-size: xx-large;
-    }
 }
