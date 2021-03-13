@@ -1,7 +1,7 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, IntegerField, BooleanField
 from wtforms.validators import DataRequired
-from wtforms.widgets import TextArea, TextInput
+from wtforms.widgets import TextArea, TextInput, PasswordInput
 
 
 class ArticleForm(FlaskForm):
@@ -10,3 +10,9 @@ class ArticleForm(FlaskForm):
     category_id = IntegerField('ID Категории', validators=[DataRequired()], widget=TextInput('number'))
     author_id = IntegerField('ID Автора', validators=[DataRequired()], widget=TextInput('number'))
     image = StringField('Ссылка на картинку', validators=[DataRequired()], widget=TextInput())
+
+
+class Registration(FlaskForm):
+    nickname = StringField('Никнэйм', validators=[DataRequired()], widget=TextInput())
+    mail = StringField('Почта', validators=[DataRequired()], widget=TextInput())
+    password = StringField('Пароль', validators=[DataRequired()], widget=PasswordInput())
