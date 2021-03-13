@@ -15,10 +15,6 @@
     max-width: 10%;
 }
 
-.big_text {
-
-}
-
 .block-label {
     margin: 0;
     text-align: center;
@@ -26,4 +22,7 @@
 }
 .form-block {
     margin-top: 10px;
+}
+
+.block {
 }
