@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for
 from article import find_by_text
 from database import db, Users, Article, Categories
 from flask_migrate import Migrate
-from forms import ArticleForm
+from forms import ArticleForm, Registration
 from flask_wtf import form
 import datetime
 
@@ -47,9 +47,12 @@ def singin():
     return render_template('login.html')
 
 
-@app.route('/singin')
+@app.route('/singin', methods=['GET', 'POST'])
 def singup():
-    return render_template('singin.html')
+    reg_form = Registration()
+    if reg_form.validate_on_submit():
+        pass
+    return render_template('singin.html', form=reg_form)
 
 
 @app.errorhandler(404)
