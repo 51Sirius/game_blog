@@ -2,12 +2,19 @@ body {
     background-color: #EEEEEE;
 }
 main {
-    display: flex;
     padding: 40px;
     min-height: 200px;
     margin: 4% 20px 20px 20px;
     border-radius: 14px;
     box-shadow: #222831 0 0 3px;
     background: #b6b6b4;
+}
+
+.form-group {
+    width: 100%;
+    display: flex;
     flex-direction: column;
+    align-items: center;
+}
+.block-form {
 }
