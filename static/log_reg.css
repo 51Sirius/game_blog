@@ -17,4 +17,9 @@ main {
     align-items: center;
 }
 .block-form {
+    margin-bottom: 10px;
+}
+
+.button-reg {
+    border-radius: 5px;
 }
