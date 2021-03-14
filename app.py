@@ -51,7 +51,12 @@ def singin():
 def singup():
     reg_form = Registration()
     if reg_form.validate_on_submit():
-        pass
+        nick = reg_form.nickname.data
+        password = reg_form.password.data
+        mail = reg_form.mail.data
+        user = Users(name=nick, password=password, mail=mail)
+        db.session.add(user)
+        db.session.commit()
     return render_template('singin.html', form=reg_form)
 
 
