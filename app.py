@@ -42,12 +42,12 @@ def search():
     return render_template('index.html', categories=categories, articles=find_by_text(text, articles))
 
 
-@app.route('/login')
+@app.route('/singin')
 def singin():
     return render_template('login.html')
 
 
-@app.route('/singin', methods=['GET', 'POST'])
+@app.route('/singup', methods=['GET', 'POST'])
 def singup():
     reg_form = Registration()
     if reg_form.validate_on_submit():
