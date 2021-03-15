@@ -16,11 +16,12 @@
 </header>
 <main>
     {% block forms %}
-        <form action="{{ url_for('create_article') }}" method="POST" class="main_create">
-        {{ form.csrf_token }}
-
-        <button type="submit" class="button_create">Создать</button>
-    </form>
+        <form action="{{ url_for('create_article') }}" method="POST" class="form-group">
+            {{ form.csrf_token }}
+            <div class="block-form"><p>{{ form.mail_or_name.label }}</p>{{ form.mail_or_name }}</div>
+            <div class="block-form"><p>{{ form.password.label }}</p>{{ form.password }}</div>
+            <button type="submit" class="button-reg">Войти</button>
+        </form>
     {% endblock %}
 </main>
 </body>
