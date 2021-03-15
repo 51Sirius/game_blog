@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for
 from article import find_by_text
 from database import db, Users, Article, Categories
 from flask_migrate import Migrate
-from forms import ArticleForm, Registration
+from forms import ArticleForm, Registration, Login
 from flask_wtf import form
 import datetime
 
@@ -44,7 +44,10 @@ def search():
 
 @app.route('/singin')
 def singin():
-    return render_template('login.html')
+    log_form = Login()
+    if log_form.validate_on_submit():
+        pass
+    return render_template('login.html', form=log_form)
 
 
 @app.route('/singup', methods=['GET', 'POST'])
