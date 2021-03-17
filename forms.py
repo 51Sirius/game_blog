@@ -9,12 +9,12 @@ class ArticleForm(FlaskForm):
     body = StringField('Текст статьи', validators=[DataRequired()], widget=TextArea())
     category_id = IntegerField('ID Категории', validators=[DataRequired()], widget=TextInput('number'))
     author_id = IntegerField('ID Автора', validators=[DataRequired()], widget=TextInput('number'))
-    image = StringField('Ссылка на картинку', validators=[DataRequired()], widget=TextInput())
+    image = StringField('Ссылка на картинку', widget=TextInput())
 
 
 class Registration(FlaskForm):
     nickname = StringField('Никнэйм', validators=[DataRequired()], widget=TextInput())
-    mail = StringField('Почта', validators=[DataRequired(), Email()], widget=TextInput())
+    mail = StringField('Почта', validators=[DataRequired()], widget=TextInput())
     password = StringField('Пароль', validators=[DataRequired()], widget=PasswordInput())
     password_confirm = StringField('Подтверждение пароля', validators=[DataRequired(), EqualTo('password')],
                                    widget=PasswordInput())

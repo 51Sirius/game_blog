@@ -9,11 +9,12 @@
 {% endblock %}
 
 {% block forms %}
-    <form action="{{ url_for('create_article') }}" method="POST" class="form-group">
+    <form action="{{ url_for('singup') }}" method="POST" class="form-group">
         {{ form.csrf_token }}
         <div class="block-form"><p>{{ form.nickname.label }}</p>{{ form.nickname }}</div>
         <div class="block-form"><p>{{ form.mail.label }}</p>{{ form.mail }}</div>
         <div class="block-form"><p>{{ form.password.label }}</p>{{ form.password }}</div>
+        <div class="block-form"><p>{{ form.password_confirm.label }}</p>{{ form.password_confirm }}</div>
         <button type="submit" class="button-reg">Зарегестрироваться</button>
     </form>
 {% endblock %}

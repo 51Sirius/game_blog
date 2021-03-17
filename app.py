@@ -1,9 +1,10 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, abort
 from article import find_by_text
 from database import db, Users, Article, Categories
 from flask_migrate import Migrate
 from forms import ArticleForm, Registration, Login
 from flask_wtf import form
+from flask_login import LoginManager, login_user, logout_user, current_user, login_required
 import datetime
 
 app = Flask(__name__)
@@ -50,17 +51,22 @@ def singin():
     return render_template('login.html', form=log_form)
 
 
-@app.route('/singup', methods=['GET', 'POST'])
+@app.route('/register', methods=['GET', 'POST'])
 def singup():
-    reg_form = Registration()
-    if reg_form.validate_on_submit():
-        nick = reg_form.nickname.data
-        password = reg_form.password.data
-        mail = reg_form.mail.data
-        user = Users(name=nick, password=Users.set_password(password), mail=mail)
+    register_form = Registration()
+    if register_form.validate_on_submit():
+        email = register_form.mail.data
+        name = register_form.nickname.data
+        password = register_form.password.data
+        existing_user = Users.query.filter_by(mail=email).first()
+        if existing_user:
+            abort(400)
+        user = Users(name=name, mail=email)
+        user.set_password(password)
         db.session.add(user)
         db.session.commit()
-    return render_template('singin.html', form=reg_form)
+        return redirect(url_for('homepage'))
+    return render_template('singup.html', form=register_form)
 
 
 @app.errorhandler(404)
