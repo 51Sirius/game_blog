@@ -18,6 +18,11 @@ migrate = Migrate(app, db)
 login = LoginManager(app)
 
 
+@login.user_loader
+def load_user(user_id):
+    return Users.query.get(int(user_id))
+
+
 @app.route('/')
 def homepage():
     articles = Article.query.all()
@@ -47,11 +52,17 @@ def search():
     return render_template('index.html', categories=categories, articles=find_by_text(text, articles))
 
 
-@app.route('/singin')
+@app.route('/singin', methods=['GET', 'POST'])
 def singin():
     log_form = Login()
     if log_form.validate_on_submit():
-        pass
+        email = log_form.email.data
+        password = log_form.password.data
+        user = Users.query.filter_by(email=email).first()
+        if not (user and user.check_password(password)):
+            abort(403)
+        login_user(user)
+        return redirect(url_for('homepage'))
     return render_template('login.html', form=log_form)
 
 
