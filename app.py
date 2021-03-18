@@ -6,12 +6,16 @@ from forms import ArticleForm, Registration, Login
 from flask_wtf import form
 from flask_login import LoginManager, login_user, logout_user, current_user, login_required
 import datetime
+import locale
+from os import environ
 
+locale.setlocale(locale.LC_ALL, '')
 app = Flask(__name__)
 app.secret_key = b'+dw4124rafa'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
 db.init_app(app)
 migrate = Migrate(app, db)
+login = LoginManager(app)
 
 
 @app.route('/')
