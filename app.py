@@ -84,6 +84,13 @@ def singup():
     return render_template('singup.html', form=register_form)
 
 
+
+@app.route('/logout')
+def logout():
+    logout_user()
+    return redirect(url_for('homepage'))
+
+
 @app.errorhandler(404)
 def not_found(error):
     categories = Categories.query.all()
