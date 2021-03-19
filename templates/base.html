@@ -21,10 +21,22 @@
             <img src="https://img.icons8.com/material-sharp/24/000000/search.png"/>
         </button>
     </form>
-    <but>
-        <a class="buttons" href={{ url_for('singup') }}>Sing Up</a>
-        <a class="buttons" href={{ url_for('singin') }}>Sing In</a>
-    </but>
+    {% if current_user.is_authenticated %}
+        <li class="">
+            <a href="#" class="nav-link">{{ current_user.name }}</a>
+        </li>
+        <li class="">
+            <a class="nav-link active" aria-current="page" href="{{ url_for('create_article') }}">Добавить статью</a>
+        </li>
+        <li class="">
+            <a href="{{ url_for('logout') }}" class="nav-link">Выйти</a>
+        </li>
+    {% else %}
+        <but>
+            <a class="buttons" href={{ url_for('singup') }}>Sing Up</a>
+            <a class="buttons" href={{ url_for('singin') }}>Sing In</a>
+        </but>
+    {% endif %}
 </header>
 <main>
     {% block any_content %}

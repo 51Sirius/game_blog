@@ -56,15 +56,13 @@ def search():
 def singin():
     log_form = Login()
     if log_form.validate_on_submit():
-        email_nick = log_form.email.data
+        email_nick = log_form.mail_or_name.data
         password = log_form.password.data
-        if '@' in email_nick:
-            user = Users.query.filter_by(mail=email_nick).first()
-        else:
-            user = Users.query.filter_by(name=email_nick).first()
+        user = Users.query.filter_by(mail=email_nick).first()
+        print(user, user.check_password(password))
         if not (user and user.check_password(password)):
             abort(403)
-        login_user(user)
+        login_user(user, remember=True)
         return redirect(url_for('homepage'))
     return render_template('login.html', form=log_form)
 
