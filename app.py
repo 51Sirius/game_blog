@@ -87,7 +87,6 @@ def singup():
     return render_template('singup.html', form=register_form)
 
 
-
 @app.route('/logout')
 def logout():
     logout_user()
@@ -102,6 +101,7 @@ def not_found(error):
 
 
 @app.route('/create_article', methods=['GET', 'POST'])
+@login_required
 def create_article():
     categories = Categories.query.all()
     article_form = ArticleForm()
@@ -109,7 +109,7 @@ def create_article():
         title = article_form.title.data
         body = article_form.body.data
         category_id = article_form.category_id.data
-        author_id = article_form.author_id.data
+        author_id = author_id = current_user.id
         image = article_form.image.data
         date = datetime.datetime.now().strftime('%d.%m..%Y')
         if image is not None:
