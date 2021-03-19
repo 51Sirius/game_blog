@@ -109,7 +109,7 @@ def create_article():
         title = article_form.title.data
         body = article_form.body.data
         category_id = article_form.category_id.data
-        author_id = author_id = current_user.id
+        author_id = current_user.id
         image = article_form.image.data
         date = datetime.datetime.now().strftime('%d.%m..%Y')
         if image is not None:
