@@ -22,15 +22,12 @@
         </button>
     </form>
     {% if current_user.is_authenticated %}
-        <li class="">
-            <a href="#" class="nav-link">{{ current_user.name }}</a>
-        </li>
-        <li class="">
-            <a class="nav-link active" aria-current="page" href="{{ url_for('create_article') }}">Добавить статью</a>
-        </li>
-        <li class="">
-            <a href="{{ url_for('logout') }}" class="nav-link">Выйти</a>
-        </li>
+
+        <but>
+            <a href="#" class="nick-label">{{ current_user.name }}</a>
+            <a class="buttons" aria-current="page" href="{{ url_for('create_article') }}">Добавить статью</a>
+            <a href="{{ url_for('logout') }}" class="buttons">Выйти</a>
+        </but>
     {% else %}
         <but>
             <a class="buttons" href={{ url_for('singup') }}>Sing Up</a>
