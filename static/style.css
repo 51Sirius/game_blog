@@ -275,3 +275,9 @@ header form button {
     background: #222831;
     border: #00ADB5;
 }
+
+.nick-label{
+    font-family: "Arial Rounded MT Bold", sans-serif;
+    color: #00ADB5;
+    font-size: x-large;
+}
