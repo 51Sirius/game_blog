@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, abort
-from article import find_by_text
-from database import db, Users, Article, Categories
+from database import db, Users, Article, Categories, find_by_text
 from flask_migrate import Migrate
 from forms import ArticleForm, Registration, Login
 from flask_wtf import form
@@ -49,7 +48,10 @@ def search():
     text = request.args['text']
     articles = Article.query.all()
     categories = Categories.query.all()
-    return render_template('index.html', categories=categories, articles=find_by_text(text, articles))
+    articles = find_by_text(text, articles)
+    if articles is None:
+        return render_template('errors/404.html', categories=categories), 404
+    return render_template('index.html', categories=categories, articles=articles)
 
 
 @app.route('/singin', methods=['GET', 'POST'])
