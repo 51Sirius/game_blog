@@ -30,10 +30,11 @@
 
 .block {
     width: 20%;
+    min-height: 3em;
 }
 
 .textarea{
-    min-height: 10em;
+    min-height: 10em !important;
     max-width: 50%;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }

@@ -9,7 +9,7 @@
     <form action="{{ url_for('create_article') }}" method="POST" class="main_create">
         {{ form.csrf_token }}
         <div class="form-block"><p class="block-label">{{ form.title.label }}</p>{{ form.title(class_="block") }}</div>
-        <div class="form-block"><p class="block-label">{{ form.body.label }}</p>{{ form.body(class_="textarea", rows="3") }}</div>
+        <div class="form-block"><p class="block-label">{{ form.body.label }}</p>{{ form.body(class_="textarea block", rows="3") }}</div>
         <div class="form-block"><p class="block-label">{{ form.image.label }}</p>{{ form.image(class_="block") }}</div>
         <div class="form-block"><p
                 class="block-label">{{ form.category_id.label }}</p>{{ form.category_id(class_="block") }}</div>
