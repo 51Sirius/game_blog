@@ -281,3 +281,9 @@ header form button {
     color: #00ADB5;
     font-size: x-large;
 }
+
+.author-label {
+    margin-left: auto;
+    color: #00ADB5;
+    font-size: medium;
+}
