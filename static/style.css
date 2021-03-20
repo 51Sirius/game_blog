@@ -1,7 +1,10 @@
 body {
+    margin: 0;
     background-color: #EEEEEE;
 }
-
+.page {
+    overflow: hidden;
+}
 header {
     top: 0;
     left: 0;
