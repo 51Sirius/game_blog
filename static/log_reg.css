@@ -20,6 +20,17 @@ main {
     margin-bottom: 10px;
 }
 
+.block-form input {
+    border: solid #000651 2px;
+    border-radius: 2px;
+}
+
+.block-form input:hover {
+    border: solid #00ADB5 2px;
+}
+
 .button-reg {
+    border: solid #000651 2px;
+    background: #00ADB5;
     border-radius: 5px;
 }
