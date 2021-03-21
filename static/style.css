@@ -4,12 +4,15 @@ body {
 }
 .page {
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 header {
+    margin-top: 0;
     top: 0;
     left: 0;
     width: 100%;
-    margin: auto;
     padding-left: 10px;
     background-color: #222831;
     display: flex;
@@ -130,7 +133,6 @@ article .footer {
 article .footer data {
     margin-right: 10px;
 }
-
 footer {
     width: 100%;
     justify-content: center;
@@ -138,6 +140,7 @@ footer {
     background: #222831;
     color: #00ADB5;
     display: flex;
+    margin-top: auto;
 }
 
 .block-footer {
