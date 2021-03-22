@@ -10,8 +10,9 @@ from os import environ
 
 locale.setlocale(locale.LC_ALL, '')
 app = Flask(__name__)
-app.secret_key = b'+dw4124rafa'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
+app.secret_key = environ.get('SECRET_KEY')
+app.config['SQLALCHEMY_DATABASE_URI'] = environ.get('DATABASE_URL')
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
 migrate = Migrate(app, db)
 login = LoginManager(app)
