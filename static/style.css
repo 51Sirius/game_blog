@@ -293,3 +293,9 @@ header form button {
     color: #00ADB5;
     font-size: medium;
 }
+
+@media screen and (max-width: 300px) {
+    .authenticated {
+        flex-direction: column;
+    }
+}

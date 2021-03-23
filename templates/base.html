@@ -24,7 +24,7 @@
         </form>
         {% if current_user.is_authenticated %}
 
-            <but>
+            <but class="authenticated">
                 <a href="#" class="nick-label">{{ current_user.name }}</a>
                 <a class="buttons" aria-current="page" href="{{ url_for('create_article') }}">Добавить статью</a>
                 <a href="{{ url_for('logout') }}" class="buttons">Выйти</a>
