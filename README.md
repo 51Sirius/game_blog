@@ -1,4 +1,4 @@
-# Game Blog
+# [Game Blog](https://game-blog-aip.herokuapp.com/)
 Сайт-проект для курсов "Технологии программирования на Python".
 
 ## Основные возможности
